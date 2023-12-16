@@ -43,18 +43,46 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
 
-      body: Column(
-        children: [
-          TextField(
-            controller: textCon1,
-            decoration: const InputDecoration(
-              label: Text("Enter Your weight"),
-              prefixIcon: Icon(Icons.monitor_weight_outlined)
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(height: 30,),
+            TextField(
+              controller: textCon1,
+              decoration: const InputDecoration(
+                label: Text("Enter Your weight(in KGS)"),
+                prefixIcon: Icon(Icons.monitor_weight_outlined),
+                border: OutlineInputBorder()
+              ),
+              keyboardType: const TextInputType.numberWithOptions(),
             ),
-            keyboardType: TextInputType.numberWithOptions(),
-          ),
+            const SizedBox(height: 25,),
+            TextField(
+              controller: textCon2,
+              decoration: const InputDecoration(
+                label: Text("Enter Your Height(in Feet"),
+                prefixIcon: Icon(Icons.height_outlined),
+                border: OutlineInputBorder(),
 
-        ],
+              ),
+              keyboardType: const TextInputType.numberWithOptions(),
+            ),
+            const SizedBox(height: 25,),
+            TextField(
+              controller: textCon2,
+              decoration: const InputDecoration(
+                label: Text("Enter Your Height(in Inch"),
+                prefixIcon: Icon(Icons.height_outlined),
+                border: OutlineInputBorder(),
+
+              ),
+              keyboardType: const TextInputType.numberWithOptions(),
+            ),
+
+          ],
+        ),
       ),
     );
   }
