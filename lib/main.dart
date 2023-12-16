@@ -138,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
                   child: const Text("Calculate")
               ),
-              SizedBox(height: 25,),
+              const SizedBox(height: 25,),
               Text(result,style: const TextStyle(fontSize: 16,color: Colors.indigo),textAlign: TextAlign.center,)
 
             ],
